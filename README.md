@@ -18,7 +18,6 @@
 # DashFlow
 Proyek ini menyediakan pipeline untuk mengestimasi kecepatan kendaraan menggunakan optical flow pada video dengan model RAFT untuk optical flow dan Sernet-former untuk segmentasi. Pipeline ini mengekstrak frame dari video, menghitung optical flow, menerapkan segmentation mask, serta menghasilkan perbedaan antara flow field dan mengestimasi kecepatan menggunakan model deep learning.
 
-- File perbedaan flow/flow diff dapat dibuat di folder "Flow difference" dan "inference". File .npy akan berada di folder "diff_flow".
 
 ## Persyaratan
 
