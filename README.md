@@ -186,7 +186,6 @@ Repositori ini berisi kode dan data untuk tugas klasifikasi dan regresi berbasis
 - **Segmentasi:** Melakukan segmentasi pada frame menggunakan Sernet_former.
 - **Flow Difference:** Menghitung perbedaan optical flow antar frame, dengan masking berbasis segmentasi.
 - **Estimasi Kecepatan:** Mengestimasi kecepatan menggunakan model deep learning.
-- **Dukungan GPU:** Otomatis menggunakan GPU CUDA jika tersedia.
 
 ## Struktur Proyek
 
