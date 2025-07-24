@@ -1,3 +1,4 @@
+
 # 🏁 Tugas Akhir (TA) - Final Project
 
 **Nama Mahasiswa**: Akmal Nafis  
@@ -15,9 +16,9 @@
 
 
 # DashFlow
-Proyek ini menyediakan pipeline untuk mengestimasi kecepatan kendaraan menggunakan optical flow pada urutan video dengan model RAFT untuk optical flow dan Sernet-former untuk segmentasi. Pipeline ini mengekstrak frame dari video, menghitung optical flow, menerapkan segmentation mask, serta menghasilkan perbedaan antara flow field dan mengestimasi kecepatan menggunakan model deep learning.
+Proyek ini menyediakan pipeline untuk mengestimasi kecepatan kendaraan menggunakan optical flow pada video dengan model RAFT untuk optical flow dan Sernet-former untuk segmentasi. Pipeline ini mengekstrak frame dari video, menghitung optical flow, menerapkan segmentation mask, serta menghasilkan perbedaan antara flow field dan mengestimasi kecepatan menggunakan model deep learning.
 
-- File perbedaan flow/Flow diff dapat dibuat di folder "Flow difference" dan "inference". File .npy akan berada di folder "diff_flow".
+- File perbedaan flow/flow diff dapat dibuat di folder "Flow difference" dan "inference". File .npy akan berada di folder "diff_flow".
 
 ## Persyaratan
 
@@ -25,7 +26,7 @@ Proyek ini menyediakan pipeline untuk mengestimasi kecepatan kendaraan menggunak
 - PyTorch
 - OpenCV
 - NumPy
-- ffmpeg (harus terinstal dan tersedia di PATH)
+- ffmpeg 
 - Pandas
 - Matplotlib
 - tqdm
@@ -94,12 +95,8 @@ flow_diff/
 - **flow/**: Hasil optical flow.
 - **flow_diff/**: Perbedaan antar flow field.
 
-## Referensi
-
-- [RAFT: Recurrent All-Pairs Field Transforms for Optical Flow](https://github.com/princeton-vl/RAFT)
 
 ---
-
 # Training Model Klasifikasi & Regresi
 
 Repositori ini berisi kode dan data untuk tugas klasifikasi dan regresi berbasis deep learning menggunakan PyTorch.
@@ -125,7 +122,7 @@ Repositori ini berisi kode dan data untuk tugas klasifikasi dan regresi berbasis
   - `data_filtered.json`: Dataset utama dalam format JSON, speed pada tiap frame video awal. 
   - `flow_diff.json`: Hasil perbedaan kecepatan antar frame.
   - `diff_speed.py`: Script untuk menghasilkan flow_diff.json dan membagi kelas training.
-  - `sub.py`: Script untuk memindahkan file .npy dari subfolder. `flow_diff/vid0100/flow_diff_vid0100_frame1.jpg.npy` menjadi `flow_diff/flow_diff_vid0100_frame1.jpg.npy`
+  - `sub.py`: Script untuk memindahkan file .npy dari subfolder. Contohnya`flow_diff/vid0100/flow_diff_vid0100_frame1.jpg.npy` menjadi `flow_diff/flow_diff_vid0100_frame1.jpg.npy`. Sangat berguna jika terdapat batch folder.
   - `flow_diff/`: Berisi file `.npy` yang mewakili perbedaan optical flow untuk setiap frame/urutan.
 - **result/**  
   Menyimpan hasil training model, termasuk plot dan checkpoint model.
@@ -230,10 +227,12 @@ tidak menggunakan Ground truth
 
 3. **Hasil** akan disimpan di folder `result/`.
 
+## Referensi
+
+- [RAFT: Recurrent All-Pairs Field Transforms for Optical Flow](https://github.com/princeton-vl/RAFT)
+- https://github.com/serdarch/SERNet-Former
+
 ## Catatan
 
-- Kode akan menampilkan `Using device: cuda` jika berjalan di GPU, atau `cpu` jika tidak.
-- Pastikan driver GPU dan CUDA sudah terinstal dengan benar untuk akselerasi GPU.
-- Pipeline akan memproses semua file `.mp4` di folder
-
+- Pipeline akan memproses semua file `.mp4` di folder `input videos`
 - Fps pada video sangat berpengaruh, hasil dari internet tidak konsisten. Hasil convert bisa sangat berpengaruh, karena sering muncul frame duplicate.
