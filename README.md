@@ -1,18 +1,17 @@
 # 🏁 Tugas Akhir (TA) - Final Project
 
-**Nama Mahasiswa**: [Nama Lengkap]  
-**NRP**: [Nomor Registrasi Pokok]  
-**Judul TA**: [Judul Tugas Akhir]  
-**Dosen Pembimbing**: [Nama Dosen]  
-**Dosen Ko-pembimbing**: [Nama Dosen]
+**Nama Mahasiswa**: Akmal Nafis  
+**NRP**: 5025211216
+**Judul TA**: Estimasi Kecepatan Relatif dengan Penghapusan Objek Di Optical Flow 
+**Dosen Pembimbing**: Rully Soelaiman, S.Kom., M.Kom.
+**Dosen Ko-pembimbing**: Dr. Eng. Muhamad Hilmil Muchtar Aditya Pradana, S.Kom, M.Sc.
 
 ---
 
 ## 📺 Demo Aplikasi  
-Embed video demo di bawah ini (ganti `VIDEO_ID` dengan ID video YouTube Anda):  
 
-  [![Demo Aplikasi](https://www.youtube.com/watch?v=yELBGahguIw&feature=youtu.be)]
-*Klik gambar di atas untuk menonton demo*
+  [[Demo Aplikasi](https://www.youtube.com/watch?v=yELBGahguIw&feature=youtu.be)]
+
 
 
 # DashFlow
@@ -221,7 +220,7 @@ menggunakan Ground truth
    python main.py --initial_speed 0 --folder test1 --gt_json json/test1.json
    ```
 tidak menggunakan Ground truth    
-    ```
+  ```
    python main.py --initial_speed 0 --folder test1 
    ```
 
